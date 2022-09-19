@@ -15,7 +15,13 @@ export class UserListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  getData(){
     this.users = this.service.getData();
   }
 
+  clearData(){
+    this.users = null;
+  }
 }
