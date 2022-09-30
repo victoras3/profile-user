@@ -1,21 +1,21 @@
-import { UserService } from './user.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
-import { UserListComponent } from './user-list/user-list.component';
+import { SimpleMatTableComponent } from './simple-mat-table/simple-mat-table.component';
+import { MaterialComponentsModule } from './material-components/material-components.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserComponent,
-    UserListComponent
-  ],
+  declarations: [AppComponent, SimpleMatTableComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    MaterialComponentsModule,
+    BrowserAnimationsModule,
   ],
-  providers: [UserService],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
